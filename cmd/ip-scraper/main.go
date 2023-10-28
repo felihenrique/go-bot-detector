@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"log"
 	"os"
+	"slices"
 
 	"github.com/felihenrique/go-botdetector/internal/tools"
 )
@@ -14,6 +15,8 @@ func main() {
 	if len(errs) > 0 {
 		log.Fatalln(errs)
 	}
+
+	slices.Sort(data)
 
 	jsonData, err := json.Marshal(data)
 
