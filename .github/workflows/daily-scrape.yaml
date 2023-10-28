@@ -27,6 +27,8 @@ jobs:
         git config --global user.name "GitHub Actions"
         git add .
         git commit -m "Auto scrape commit $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Push to master branch
       run: |
