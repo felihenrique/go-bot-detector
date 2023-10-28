@@ -1,6 +1,7 @@
 package tools
 
 import (
+	"log"
 	"strings"
 
 	httputils "github.com/felihenrique/go-botdetector/pkg/http-utils"
@@ -9,6 +10,8 @@ import (
 const LINODE_IPS_URL = "https://geoip.linode.com/"
 
 func FetchLinodeIps() ([]string, error) {
+	log.Println("Fetching linode data")
+
 	data, err := httputils.GetData(LINODE_IPS_URL)
 
 	if err != nil {

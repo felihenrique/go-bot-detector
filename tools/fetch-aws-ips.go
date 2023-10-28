@@ -1,6 +1,10 @@
 package tools
 
-import httputils "github.com/felihenrique/go-botdetector/pkg/http-utils"
+import (
+	"log"
+
+	httputils "github.com/felihenrique/go-botdetector/pkg/http-utils"
+)
 
 const AWS_IPS_URL = "https://ip-ranges.amazonaws.com/ip-ranges.json"
 
@@ -13,6 +17,8 @@ type awsData struct {
 }
 
 func FetchAWSIps() ([]string, error) {
+	log.Println("Fetching AWS data")
+
 	data, err := httputils.GetJSON[awsData](AWS_IPS_URL)
 
 	if err != nil {

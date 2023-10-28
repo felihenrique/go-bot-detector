@@ -1,6 +1,7 @@
 package tools
 
 import (
+	"log"
 	"strings"
 
 	httputils "github.com/felihenrique/go-botdetector/pkg/http-utils"
@@ -9,6 +10,8 @@ import (
 const CLOUDFLARE_IPS_URL = "https://www.cloudflare.com/ips-v4"
 
 func FetchCloudflareIps() ([]string, error) {
+	log.Println("Fetching Cloudflare data")
+
 	data, err := httputils.GetData(CLOUDFLARE_IPS_URL)
 
 	if err != nil {

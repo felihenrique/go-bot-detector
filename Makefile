@@ -1,4 +1,4 @@
 test:
 	go test ./...
-run-scraper:
+scrape:
 	go run cmd/ip-scraper/main.go

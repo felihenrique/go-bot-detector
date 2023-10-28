@@ -1,6 +1,10 @@
 package tools
 
-import httputils "github.com/felihenrique/go-botdetector/pkg/http-utils"
+import (
+	"log"
+
+	httputils "github.com/felihenrique/go-botdetector/pkg/http-utils"
+)
 
 const ORACLE_IPS_URL = "https://docs.oracle.com/iaas/tools/public_ip_ranges.json"
 
@@ -17,6 +21,8 @@ type oracleData struct {
 }
 
 func FetchOracleIps() ([]string, error) {
+	log.Println("Fetching oracle data")
+
 	data, err := httputils.GetJSON[oracleData](ORACLE_IPS_URL)
 
 	if err != nil {

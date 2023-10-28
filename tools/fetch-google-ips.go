@@ -1,6 +1,10 @@
 package tools
 
-import httputils "github.com/felihenrique/go-botdetector/pkg/http-utils"
+import (
+	"log"
+
+	httputils "github.com/felihenrique/go-botdetector/pkg/http-utils"
+)
 
 const GOOGLE_IPS_URL = "https://www.gstatic.com/ipranges/cloud.json"
 
@@ -13,6 +17,8 @@ type googlePrefix struct {
 }
 
 func FetchGoogleIps() ([]string, error) {
+	log.Println("Fetching google cloud data")
+
 	data, err := httputils.GetJSON[googleData](GOOGLE_IPS_URL)
 
 	if err != nil {

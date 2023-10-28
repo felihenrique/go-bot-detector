@@ -1,6 +1,7 @@
 package tools
 
 import (
+	"log"
 	"strings"
 
 	httputils "github.com/felihenrique/go-botdetector/pkg/http-utils"
@@ -9,6 +10,8 @@ import (
 const DIGITALOCEAN_IPS_URL = "https://digitalocean.com/geo/google.csv"
 
 func FetchDigitalOceanIps() ([]string, error) {
+	log.Println("Fetching Digital ocean data")
+
 	data, err := httputils.GetData(DIGITALOCEAN_IPS_URL)
 
 	if err != nil {
