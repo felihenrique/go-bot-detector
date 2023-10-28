@@ -1,9 +1,9 @@
 package iptree_test
 
 import (
-	"bot-detector/pkg/iptree"
 	"testing"
 
+	"github.com/felihenrique/go-botdetector/internal/iptree"
 	"github.com/stretchr/testify/assert"
 )
 
