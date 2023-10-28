@@ -1,4 +1,4 @@
-module bot-detector
+module github.com/felihenrique/go-botdetector
 
 go 1.21.3
 
