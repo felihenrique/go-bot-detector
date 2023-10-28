@@ -26,5 +26,7 @@ func FetchDigitalOceanIps() ([]string, error) {
 		ranges = append(ranges, values[0])
 	}
 
+	log.Printf("Fetched %d IPS for digitalocean", len(ranges))
+
 	return ranges, nil
 }

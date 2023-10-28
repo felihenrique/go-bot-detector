@@ -38,16 +38,27 @@ func FetchAllIps() ([]string, []error) {
 		close(errChan)
 	}()
 
-	allRanges := make([]string, 0, 15000)
+	unqRanges := make(map[string]byte)
 	allErrors := make([]error, 0, len(funcs))
 
 	for data := range rgChan {
-		allRanges = append(allRanges, data...)
+		for _, v := range data {
+			if v == "" {
+				continue
+			}
+			unqRanges[v] = 0
+		}
+	}
+
+	ranges := make([]string, 0, len(unqRanges))
+
+	for ip := range unqRanges {
+		ranges = append(ranges, ip)
 	}
 
 	for err := range errChan {
 		allErrors = append(allErrors, err)
 	}
 
-	return allRanges, allErrors
+	return ranges, allErrors
 }

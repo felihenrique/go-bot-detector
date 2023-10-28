@@ -20,5 +20,7 @@ func FetchCloudflareIps() ([]string, error) {
 
 	ips := strings.Split(string(data), "\n")
 
+	log.Printf("Fetched %d IPS for cloudflare", len(ips))
+
 	return ips, nil
 }

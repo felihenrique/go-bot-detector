@@ -31,5 +31,7 @@ func FetchLinodeIps() ([]string, error) {
 		ranges = append(ranges, values[0])
 	}
 
+	log.Printf("Fetched %d IPS for linode", len(ranges))
+
 	return ranges, err
 }

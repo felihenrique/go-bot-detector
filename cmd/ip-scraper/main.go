@@ -18,7 +18,7 @@ func main() {
 
 	slices.Sort(data)
 
-	jsonData, err := json.Marshal(data)
+	jsonData, err := json.MarshalIndent(data, "", "  ")
 
 	if err != nil {
 		log.Fatalln(err)

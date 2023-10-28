@@ -36,5 +36,7 @@ func FetchOracleIps() ([]string, error) {
 		}
 	}
 
+	log.Printf("Fetched %d IPS for oracle cloud", len(ranges))
+
 	return ranges, err
 }

@@ -31,5 +31,7 @@ func FetchAWSIps() ([]string, error) {
 		ranges = append(ranges, p.IpPrefix)
 	}
 
+	log.Printf("Fetched %d IPS for AWS", len(ranges))
+
 	return ranges, nil
 }

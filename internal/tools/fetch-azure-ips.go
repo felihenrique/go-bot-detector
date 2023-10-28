@@ -34,5 +34,7 @@ func FetchAzureIps() ([]string, error) {
 		ranges = append(ranges, dv.Properties.AddressPrefixes...)
 	}
 
+	log.Printf("Fetched %d IPS for azure", len(ranges))
+
 	return ranges, nil
 }

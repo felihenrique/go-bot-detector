@@ -31,5 +31,7 @@ func FetchGoogleIps() ([]string, error) {
 		ranges = append(ranges, p.IpV4Prefix)
 	}
 
+	log.Printf("Fetched %d IPS for google cloud", len(ranges))
+
 	return ranges, nil
 }
