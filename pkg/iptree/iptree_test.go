@@ -3,7 +3,7 @@ package iptree_test
 import (
 	"testing"
 
-	"github.com/felihenrique/go-botdetector/internal/iptree"
+	"github.com/felihenrique/go-botdetector/pkg/iptree"
 	"github.com/stretchr/testify/assert"
 )
 
