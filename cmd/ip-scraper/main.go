@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/felihenrique/go-botdetector/tools"
+	"github.com/felihenrique/go-botdetector/internal/tools"
 )
 
 func main() {
