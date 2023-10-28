@@ -18,6 +18,12 @@ func New() detector {
 	d := detector{}
 	d.tree = iptree.New(0)
 
+	d.LoadDefaultRanges()
+
+	return d
+}
+
+func (d *detector) LoadDefaultRanges() {
 	data, err := httputils.GetJSON[[]string](JSON_URL)
 
 	if err != nil {
@@ -27,8 +33,6 @@ func New() detector {
 	for _, v := range *data {
 		d.AddRange(v)
 	}
-
-	return d
 }
 
 func (d *detector) AddRange(ipRange string) (bool, error) {
