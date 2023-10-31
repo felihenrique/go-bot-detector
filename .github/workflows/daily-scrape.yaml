@@ -28,7 +28,7 @@ jobs:
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
         git add .
-        git commit -m "Auto scrape commit $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+        git commit -m "Auto scrape commit $(date -u +"%Y-%m-%dT%H:%M:%SZ")" || echo "No changes to commit"
         
     - name: Push to master branch
       run: |
