@@ -1,11 +1,10 @@
 # Go bot detector
 
-This library was created to provide ways to detect if a requisition was made from a bot or not.
-You can use the library to check if an IP is probably from a bot (checking if the requisition was made from a cloud provider like AWS or Azure). The check is based on an IP tree to provide fast returns. You can also check if the user agent is from a list of common agents used in scraping. 
+This library was created to provide a means of detecting whether a request was made by a bot or a human user. You can use this library to check if an IP address is likely associated with a bot, such as when the request originates from a cloud provider like AWS or Azure. This check is based on an IP tree structure for fast and efficient results. Additionally, you can verify if the user agent matches a list of common agents commonly used in web scraping.
 
 ## Up to date ip ranges list
 
-This repository has a scraper that do daily scraping of public ip ranges from major clouds (you can see the list at <a href="https://github.com/felihenrique/go-botdetector/tree/master/internal/tools">internal/tools</a>). You are welcome to contribute with more open data.
+This repository includes a scraper that performs daily scraping of public IP address ranges from major cloud providers. You can find the list [here](https://github.com/felihenrique/go-botdetector/tree/master/internal/tools). We welcome contributions of additional open data.
 
 ## Using the library
 
