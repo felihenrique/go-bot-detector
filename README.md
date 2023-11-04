@@ -4,20 +4,20 @@ This library was created to provide a means of detecting whether a request was m
 
 ## Up to date ip ranges list
 
-This repository includes a scraper that performs daily scraping of public IP address ranges from major cloud providers. You can find the list [here](https://github.com/felihenrique/go-botdetector/tree/master/internal/tools). We welcome contributions of additional open data.
+This repository includes a scraper that performs daily scraping of public IP address ranges from major cloud providers. You can find the list [here](https://github.com/felihenrique/go-bot-detector/tree/master/internal/tools). We welcome contributions of additional open data.
 
 ## Using the library
 
 - First install the library on your project:
 ```
-go get github.com/felihenrique/go-botdetector
+go get github.com/felihenrique/go-bot-detector
 ```
 
 - Using the library to check an ip:
 ```go
 package main
 
-import "github.com/felihenrique/go-botdetector"
+import "github.com/felihenrique/go-bot-detector"
 
 func main() {
 	// Using a specific IP
@@ -44,10 +44,10 @@ func main() {
 ```go
 package main
 
-import "github.com/felihenrique/go-botdetector"
+import "github.com/felihenrique/go-bot-detector"
 
 func main() {
-	isBotAgent := botdetector.IsBotAgent("googlebot")
+	isBotAgent := botdetector.IsBotAgent("Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)")
 
 	println(isBotAgent)
 }
