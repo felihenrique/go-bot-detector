@@ -21,7 +21,7 @@ type azureData struct {
 }
 
 func FetchAzureIps() ([]string, error) {
-	log.Println("Fetching AWS data")
+	log.Println("Fetching Azure data")
 
 	data, err := httputils.GetJSON[azureData](AZURE_IPS_URL)
 

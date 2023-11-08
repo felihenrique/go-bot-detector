@@ -25,7 +25,7 @@ func FetchAllIps() ([]string, []error) {
 
 	funcs := []FetchFunc{
 		FetchAWSIps, FetchCloudflareIps, FetchDigitalOceanIps, FetchGoogleIps, FetchLinodeIps,
-		FetchAzureIps,
+		// FetchAzureIps,
 	}
 	wg.Add(len(funcs))
 	for _, ff := range funcs {
